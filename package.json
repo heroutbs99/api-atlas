@@ -1,0 +1,12 @@
+{
+  "name": "api-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "update:data": "node scripts/update-data.mjs",
+    "verify:links": "node scripts/verify-catalog-links.mjs",
+    "verify:curated": "node scripts/verify-curated-links.mjs"
+  }
+}

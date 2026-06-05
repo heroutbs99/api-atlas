@@ -1,0 +1,589 @@
+{
+  "removedAt": "2026-06-04T22:33:21.284Z",
+  "reason": "Website cannot be resolved or connected to (curl exit 6/7) or NXDOMAIN",
+  "count": 83,
+  "deadHostCount": 96,
+  "apis": [
+    {
+      "name": "Alerter System API",
+      "host": "alertersystem.com",
+      "url": "https://alertersystem.com/",
+      "category": "OpenAPI",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "ApiDapp",
+      "host": "apidapp.com",
+      "url": "https://apidapp.com/",
+      "category": "Financial",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Marketcheck APIs",
+      "host": "apigee.net",
+      "url": "https://apigee.net/",
+      "category": "Ecommerce",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "OpenAPI space",
+      "host": "apinf.org",
+      "url": "http://apinf.org/",
+      "category": "Developer Tools",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Active Documentation for /v1",
+      "host": "app.idtbeyond.com",
+      "url": "https://app.idtbeyond.com/terms/",
+      "category": "Telecom",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Authentiq Connect API",
+      "host": "authentiq.com",
+      "url": "https://www.authentiq.com/",
+      "category": "Security",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "AviationData.Systems Airports API V1",
+      "host": "aviationdata.systems",
+      "url": "https://aviationdata.systems/",
+      "category": "Transport",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "IBM Containers API",
+      "host": "bluemix.net",
+      "url": "https://bluemix.net/",
+      "category": "Developer Tools",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Cambase.io",
+      "host": "cambase.io",
+      "url": "https://cambase.io/",
+      "category": "OpenAPI",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "REST API Version 2",
+      "host": "circuitsandbox.net",
+      "url": "https://circuitsandbox.net/",
+      "category": "Messaging",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Crossbrowsertesting.com Screenshot Comparisons API",
+      "host": "crossbrowsertesting.com",
+      "url": "https://crossbrowsertesting.com/",
+      "category": "Developer Tools",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Application Insights Data Plane",
+      "host": "dev.applicationinsights.io",
+      "url": "https://dev.applicationinsights.io/support",
+      "category": "Cloud",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Azure Log Analytics",
+      "host": "dev.loganalytics.io",
+      "url": "https://dev.loganalytics.io/support",
+      "category": "Cloud",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "NPR Authorization Service",
+      "host": "dev.npr.org",
+      "url": "https://dev.npr.org/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "NPR Identity Service",
+      "host": "dev.npr.org",
+      "url": "https://dev.npr.org/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "NPR Listening Service",
+      "host": "dev.npr.org",
+      "url": "https://dev.npr.org/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "NPR Sponsorship Service",
+      "host": "dev.npr.org",
+      "url": "https://dev.npr.org/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "NPR Station Finder Service",
+      "host": "dev.npr.org",
+      "url": "https://dev.npr.org/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Channel 4 API",
+      "host": "developer.channel4.com",
+      "url": "http://developer.channel4.com/",
+      "category": "Media",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "GoToMeeting",
+      "host": "developer.citrixonline.com",
+      "url": "https://developer.citrixonline.com/",
+      "category": "Collaboration",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "SCIM",
+      "host": "developer.citrixonline.com",
+      "url": "https://developer.citrixonline.com/",
+      "category": "OpenAPI",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Lyft",
+      "host": "developer.lyft.com",
+      "url": "http://developer.lyft.com/",
+      "category": "Location",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "PVWatts",
+      "host": "developer.nrel.gov",
+      "url": "https://developer.nrel.gov/docs/solar/pvwatts/v6/",
+      "category": "Environment",
+      "source": "Public API Lists"
+    },
+    {
+      "name": "Accounts API",
+      "host": "developer.williamhill.com",
+      "url": "http://developer.williamhill.com/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Bets API",
+      "host": "developer.williamhill.com",
+      "url": "http://developer.williamhill.com/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Sessions API",
+      "host": "developer.williamhill.com",
+      "url": "http://developer.williamhill.com/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "SportsData API",
+      "host": "developer.williamhill.com",
+      "url": "http://developer.williamhill.com/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "IoE² IoT API - to create end-user applications",
+      "host": "developers.ijenko.com",
+      "url": "http://developers.ijenko.com/",
+      "category": "Iot",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Psycholinguistic Text Analytics",
+      "host": "developers.symanto.net",
+      "url": "https://developers.symanto.net/",
+      "category": "Text",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Amazon Scraper API",
+      "host": "docs.amazonscraperapi.com",
+      "url": "https://docs.amazonscraperapi.com/",
+      "category": "Shopping",
+      "source": "Public API Lists"
+    },
+    {
+      "name": "Impala Hotel Booking API",
+      "host": "docs.impala.travel",
+      "url": "https://docs.impala.travel/",
+      "category": "Ecommerce",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Net API",
+      "host": "eos.io",
+      "url": "https://eos.io/",
+      "category": "Hosting",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "ESG Rating Data",
+      "host": "esgenterprise.com",
+      "url": "https://esgenterprise.com/",
+      "category": "Open Data",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Api Documentation",
+      "host": "faceidentity-beta.azurewebsites.net",
+      "url": "https://faceidentity-beta.azurewebsites.net/",
+      "category": "Security",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "GameSparks Game Details API",
+      "host": "gamesparks.com",
+      "url": "http://www.gamesparks.com/gamesparks-terms-of-use",
+      "category": "Developer Tools",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "goog.io | Unoffical Google Search API",
+      "host": "goog.io",
+      "url": "https://goog.io/",
+      "category": "Search",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Metadata",
+      "host": "haloapi.com",
+      "url": "https://haloapi.com/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Profile",
+      "host": "haloapi.com",
+      "url": "https://haloapi.com/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Stats",
+      "host": "haloapi.com",
+      "url": "https://haloapi.com/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "UGC",
+      "host": "haloapi.com",
+      "url": "https://haloapi.com/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "hetras Booking API Version 0",
+      "host": "hetras-certification.net",
+      "url": "https://hetras-certification.net/",
+      "category": "OpenAPI",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "hetras Hotel API Version 0",
+      "host": "hetras-certification.net",
+      "url": "https://hetras-certification.net/",
+      "category": "OpenAPI",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "shinobiapi",
+      "host": "hillbillysoftware.com",
+      "url": "https://hillbillysoftware.com/",
+      "category": "Media",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Dados Abertos - API",
+      "host": "inpe.br",
+      "url": "https://inpe.br/",
+      "category": "Location",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "ipTwist",
+      "host": "iptwist.com",
+      "url": "https://iptwist.com/legal/terms",
+      "category": "Developer Tools",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Entertainment Express API",
+      "host": "iva-api.com",
+      "url": "https://iva-api.com/",
+      "category": "Media",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "agentOS Api V2, Customer Login Call Group",
+      "host": "letmc.com",
+      "url": "https://letmc.com/",
+      "category": "Ecommerce",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "agentOS API V3, Diary Call Group",
+      "host": "letmc.com",
+      "url": "https://letmc.com/",
+      "category": "Ecommerce",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "agentOS API V3, Maintenance Call Group",
+      "host": "letmc.com",
+      "url": "https://letmc.com/",
+      "category": "Ecommerce",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "LetMC Api V2, Basic (Tier 2)",
+      "host": "letmc.com",
+      "url": "https://letmc.com/",
+      "category": "Ecommerce",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "LetMC Api V2, Free (Tier 1)",
+      "host": "letmc.com",
+      "url": "https://letmc.com/",
+      "category": "Ecommerce",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "LetMC Api V3, reporting",
+      "host": "letmc.com",
+      "url": "https://letmc.com/",
+      "category": "Ecommerce",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "API docs | logoraisr.com",
+      "host": "logoraisr.com",
+      "url": "https://logoraisr.com/",
+      "category": "Media",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "LotaData",
+      "host": "lotadata.com",
+      "url": "https://lotadata.com/",
+      "category": "Location",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Mailscript",
+      "host": "mailscript.com",
+      "url": "https://mailscript.com/",
+      "category": "Email",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Mon-voyage-pas-cher.com Public API",
+      "host": "mon-voyage-pas-cher.com",
+      "url": "https://mon-voyage-pas-cher.com/",
+      "category": "Transport",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Moon by Ai Weiwei & Olafur Eliasson",
+      "host": "moonmoonmoonmoon.com",
+      "url": "https://moonmoonmoonmoon.com/",
+      "category": "OpenAPI",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Authorized Partner API Specification",
+      "host": "ndh.digitallocker.gov.in",
+      "url": "https://ndh.digitallocker.gov.in/terms.php",
+      "category": "Open Data",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "DigiLocker Issuer APIs",
+      "host": "ndh.digitallocker.gov.in",
+      "url": "https://ndh.digitallocker.gov.in/terms.php",
+      "category": "Open Data",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Nordigen Account Information Services API",
+      "host": "nordigen.com",
+      "url": "https://nordigen.com/",
+      "category": "Financial",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Merchant Identifier API V2",
+      "host": "not.applicable.com",
+      "url": "http://not.applicable.com/",
+      "category": "OpenAPI",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "High Performance Building Database",
+      "host": "nrel.gov",
+      "url": "https://nrel.gov/",
+      "category": "Open Data",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Transportation Laws and Incentives",
+      "host": "nrel.gov",
+      "url": "https://nrel.gov/",
+      "category": "Open Data",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "OpenChannel Market API",
+      "host": "openchannel.io",
+      "url": "https://openchannel.io/",
+      "category": "OpenAPI",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Open Targets Platform REST API",
+      "host": "opentargets.io",
+      "url": "https://opentargets.io/",
+      "category": "Open Data",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "PasswordUtility.Web",
+      "host": "passwordutility.net",
+      "url": "https://passwordutility.net/",
+      "category": "Security",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "EmailVerify",
+      "host": "paypi.dev",
+      "url": "https://paypi.dev/",
+      "category": "Email",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "PayRun.IO",
+      "host": "payrun.io",
+      "url": "https://payrun.io/",
+      "category": "Financial",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Peel Tune-in API",
+      "host": "peel-ci.com",
+      "url": "https://peel-ci.com/",
+      "category": "Media",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Self Service Developer API",
+      "host": "peoplefinderspro.com",
+      "url": "https://peoplefinderspro.com/",
+      "category": "Marketing",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "OpenAPI definition",
+      "host": "peoplegeneratorapi.live",
+      "url": "https://peoplegeneratorapi.live/",
+      "category": "Tools",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "PsyQuiz",
+      "host": "psy.oneroad.com",
+      "url": "https://psy.oneroad.com/api",
+      "category": "Personality",
+      "source": "Public API Lists"
+    },
+    {
+      "name": "Coronavirus API",
+      "host": "quarantine.country",
+      "url": "https://quarantine.country/coronavirus/api/privacy.html",
+      "category": "Open Data",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Quicksold REST API",
+      "host": "quicksold.co.uk",
+      "url": "https://quicksold.co.uk/",
+      "category": "Location",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "RenderPDF.io",
+      "host": "renderpdf.io",
+      "url": "https://renderpdf.io/",
+      "category": "Documents & Productivity",
+      "source": "Public API Lists"
+    },
+    {
+      "name": "Prime ReportStream",
+      "host": "reportstream.cdc.gov",
+      "url": "https://reportstream.cdc.gov/",
+      "category": "Open Data",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Semantria",
+      "host": "semantria.com",
+      "url": "https://semantria.com/",
+      "category": "Social",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "api.ecota.co v2",
+      "host": "staging-ecotaco.com",
+      "url": "https://staging-ecotaco.com/",
+      "category": "Location",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Stream Chat API",
+      "host": "stream-io-api.com",
+      "url": "https://stream-io-api.com/",
+      "category": "OpenAPI",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Vestorly API",
+      "host": "vestorly.com",
+      "url": "http://www.vestorly.com/terms/",
+      "category": "Marketing",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Locations",
+      "host": "whapi.com",
+      "url": "https://whapi.com/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Numbers API",
+      "host": "whapi.com",
+      "url": "https://whapi.com/",
+      "category": "Entertainment",
+      "source": "APIs.guru"
+    },
+    {
+      "name": "Transform",
+      "host": "wso2apistore.com",
+      "url": "https://wso2apistore.com/",
+      "category": "Developer Tools",
+      "source": "APIs.guru"
+    }
+  ]
+}

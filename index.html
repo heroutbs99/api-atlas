@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="API Atlas — a fast, searchable world map of public APIs.">
+    <meta name="color-scheme" content="light dark">
+    <title>API Atlas</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/logo.svg">
+    <meta name="theme-color" content="#1d9e75">
+    <link rel="preload" href="data/apis.json" as="fetch" type="application/json" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem("api-atlas-theme");
+          const system = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          document.documentElement.dataset.theme = saved || system;
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="API Atlas home">
+        <span class="brand-mark" aria-hidden="true">
+          <img class="logo-light" src="assets/logo.svg" alt="" width="40" height="40">
+          <img class="logo-dark" src="assets/logo-dark.svg" alt="" width="40" height="40">
+        </span>
+        <span class="brand-text">
+          <strong>API Atlas</strong>
+          <small>Explore the world of APIs</small>
+        </span>
+      </a>
+
+      <div class="topbar-actions">
+        <span class="data-status" id="generatedAt" aria-live="polite">Charting the catalog…</span>
+        <button id="themeToggle" class="icon-button" type="button" aria-label="Toggle day / night map" title="Toggle day / night map">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="hero-eyebrow">The world API directory</span>
+            <h1>Explore the world of APIs</h1>
+            <p class="hero-sub">Thousands of public APIs, charted from across the web — search, filter, and set your course.</p>
+          </div>
+
+          <div class="hero-map" aria-label="Interactive API region map">
+            <svg id="heroMapSvg" viewBox="0 0 1440 280" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+              <defs>
+                <pattern id="mapdots" width="22" height="22" patternUnits="userSpaceOnUse">
+                  <circle class="m-dot" cx="2" cy="2" r="1.3"/>
+                </pattern>
+                <clipPath id="mapPlate">
+                  <rect x="340" y="34" width="760" height="212" rx="106"/>
+                </clipPath>
+              </defs>
+              <rect class="map-plate" x="340" y="34" width="760" height="212" rx="106"/>
+              <g clip-path="url(#mapPlate)">
+                <rect width="1440" height="280" fill="url(#mapdots)"/>
+                <g class="m-line" fill="none">
+                  <ellipse cx="720" cy="140" rx="350" ry="96"/>
+                  <ellipse cx="720" cy="140" rx="210" ry="96"/>
+                  <ellipse cx="720" cy="140" rx="90" ry="96"/>
+                  <line x1="340" y1="140" x2="1100" y2="140"/>
+                  <line x1="720" y1="34" x2="720" y2="246"/>
+                </g>
+              </g>
+              <rect class="map-frame" x="340" y="34" width="760" height="212" rx="106"/>
+              <g class="m-route" fill="none">
+                <path d="M-60 182 C 150 138 310 156 420 150 C 480 147 502 102 545 100 C 600 97 626 168 685 166 C 745 164 770 104 820 104 C 875 104 896 162 950 158 C 1000 154 1022 128 1060 122 C 1210 102 1340 108 1500 106"/>
+              </g>
+              <g class="m-pins">
+                <g class="pin" data-label-x="420" data-label-y="124"><circle class="pin-ring" cx="420" cy="150" r="7"/><circle class="pin-dot" cx="420" cy="150" r="3"/></g>
+                <g class="pin" data-label-x="545" data-label-y="74"><circle class="pin-ring" cx="545" cy="100" r="7"/><circle class="pin-dot" cx="545" cy="100" r="3"/></g>
+                <g class="pin" data-label-x="685" data-label-y="142"><circle class="pin-ring" cx="685" cy="166" r="7"/><circle class="pin-dot" cx="685" cy="166" r="3"/></g>
+                <g class="pin" data-label-x="820" data-label-y="78"><circle class="pin-ring" cx="820" cy="104" r="7"/><circle class="pin-dot" cx="820" cy="104" r="3"/></g>
+                <g class="pin" data-label-x="950" data-label-y="134" data-label-anchor="end"><circle class="pin-ring" cx="950" cy="158" r="7"/><circle class="pin-dot" cx="950" cy="158" r="3"/></g>
+                <g class="pin" data-label-x="1060" data-label-y="96"><circle class="pin-ring" cx="1060" cy="122" r="7"/><circle class="pin-dot" cx="1060" cy="122" r="3"/></g>
+              </g>
+              <g class="m-compass" transform="translate(1052,74)">
+                <circle r="20" class="compass-ring" fill="none"/>
+                <circle r="15" class="compass-ring" fill="none"/>
+                <path d="M0 -20 L5 0 L0 4 L-5 0 Z" class="compass-n"/>
+                <path d="M0 20 L5 0 L0 -4 L-5 0 Z" class="compass-s"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="search-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="searchInput" type="search" placeholder="Search APIs" autocomplete="off" spellcheck="false" aria-label="Search APIs">
+            <button id="clearSearch" class="search-clear" type="button" aria-label="Clear search" hidden>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+
+          <div class="stat-chips" aria-label="Catalog summary">
+            <span class="chip-stat"><strong id="totalCount">—</strong> APIs charted</span>
+            <span class="chip-stat"><strong id="visibleCount">—</strong> in view</span>
+            <span class="chip-stat"><strong id="categoryCount">—</strong> regions</span>
+            <span class="chip-stat"><strong id="openApiCount">—</strong> OpenAPI specs</span>
+          </div>
+
+          <p class="map-status" id="mapStatus" aria-live="polite"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 0 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>Global catalog</p>
+        </div>
+      </section>
+
+      <div class="content">
+        <div class="controls" role="region" aria-label="Map controls">
+          <span class="controls-title"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7l6-3 8 3 6-3v13l-6 3-8-3-6 3zM8 4v13M16 7v13"/></svg> Map controls</span>
+          <label class="field">
+            <span>Region</span>
+            <select id="categoryFilter"><option value="all">All regions</option></select>
+          </label>
+          <label class="field">
+            <span>Access</span>
+            <select id="authFilter"><option value="all">All access</option></select>
+          </label>
+          <label class="field">
+            <span>Source</span>
+            <select id="sourceFilter"><option value="all">All sources</option></select>
+          </label>
+          <label class="field">
+            <span>Sort</span>
+            <select id="sortSelect">
+              <option value="name">Name (A–Z)</option>
+              <option value="category">Region</option>
+              <option value="source">Source</option>
+              <option value="updated">Recently updated</option>
+            </select>
+          </label>
+          <div class="controls-actions">
+            <button id="resetButton" class="ghost-button" type="button">Recenter</button>
+          </div>
+        </div>
+
+        <p class="result-caption" id="resultCaption" aria-live="polite">Plotting the map…</p>
+
+        <section id="apiGrid" class="api-grid" aria-label="API catalog" aria-busy="true">
+          <div class="card skeleton" aria-hidden="true"></div>
+          <div class="card skeleton" aria-hidden="true"></div>
+          <div class="card skeleton" aria-hidden="true"></div>
+          <div class="card skeleton" aria-hidden="true"></div>
+          <div class="card skeleton" aria-hidden="true"></div>
+          <div class="card skeleton" aria-hidden="true"></div>
+        </section>
+
+        <div class="catalog-actions">
+          <button id="showMoreButton" class="show-more-button" type="button" hidden>Show more APIs</button>
+          <span id="pageSummary" class="page-summary" aria-live="polite"></span>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-copy">© <span id="copyrightYear">2026</span> API Atlas. All rights reserved.</p>
+
+        <a class="footer-credit" href="https://www.tcfella.com/" target="_blank" rel="noreferrer noopener" aria-label="by tcfella.com">
+          <span class="tcf-logo" aria-hidden="true">
+            <svg viewBox="0 0 585.61 501.84" width="24" height="24" role="img" aria-label="TCF logo">
+              <path class="tcf-mark-dark" d="M585.13,0v501.84s-83.04,0-83.04,0l-.18-250.85-83.5.03v-83.75s83.5.04,83.5.04l-.02-83.62h-250.79s-.03,83.61-.03,83.61h-83.66s-.01-83.61-.01-83.61H.5c-.78-1.29-.03-2.26-.02-3.56L.49,0h584.64Z"/>
+              <polygon class="tcf-mark-yellow" points="84.01 501.84 0 501.84 .11 418.28 83.83 418.28 84.01 501.84"/>
+              <polygon class="tcf-mark-yellow" points="251.08 167.29 418.41 167.26 418.41 251.01 251.22 251.01 251.18 418.25 418.29 418.28 418.57 501.84 167.53 501.84 167.42 167.29 251.08 167.29"/>
+              <rect class="tcf-mark-yellow" x="585.13" y="0" width=".48" height="501.84"/>
+            </svg>
+          </span>
+          <span class="footer-credit-text">
+            <span>by</span>
+            <strong>tcfella.com</strong>
+          </span>
+        </a>
+      </div>
+    </footer>
+
+    <script src="assets/app.js" type="module"></script>
+  </body>
+</html>
