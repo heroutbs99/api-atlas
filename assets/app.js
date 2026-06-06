@@ -21,7 +21,7 @@ const state = {
 const els = {
   html: document.documentElement,
   generatedAt: document.querySelector("#generatedAt"),
-  themeToggle: document.querySelector("#themeToggle"),
+  themeOptions: [...document.querySelectorAll("[data-theme-choice]")],
   searchInput: document.querySelector("#searchInput"),
   clearSearch: document.querySelector("#clearSearch"),
   categoryFilter: document.querySelector("#categoryFilter"),
@@ -41,6 +41,9 @@ const els = {
   copyrightYear: document.querySelector("#copyrightYear")
 };
 
+const THEME_KEY = "api-atlas-theme";
+const THEME_MODES = new Set(["system", "light", "dark"]);
+const systemThemeQuery = matchMedia("(prefers-color-scheme: dark)");
 const fmt = new Intl.NumberFormat();
 const fmtDate = new Intl.DateTimeFormat(undefined, { year: "numeric", month: "short", day: "numeric" });
 
@@ -552,13 +555,46 @@ function debounce(fn, ms) {
 }
 
 /* ---------------- Theme ---------------- */
-function setTheme(theme) {
-  els.html.dataset.theme = theme;
-  try { localStorage.setItem("api-atlas-theme", theme); } catch (_) {}
+function systemTheme() {
+  return systemThemeQuery.matches ? "dark" : "light";
 }
-els.themeToggle.addEventListener("click", () => {
-  setTheme(els.html.dataset.theme === "dark" ? "light" : "dark");
+
+function savedThemeMode() {
+  try {
+    const saved = localStorage.getItem(THEME_KEY);
+    return THEME_MODES.has(saved) ? saved : "system";
+  } catch (_) {
+    return "system";
+  }
+}
+
+function applyThemeMode(mode = savedThemeMode()) {
+  const resolved = mode === "system" ? systemTheme() : mode;
+  els.html.dataset.themeMode = mode;
+  els.html.dataset.theme = resolved;
+  els.html.style.colorScheme = resolved;
+
+  for (const option of els.themeOptions) {
+    const isActive = option.dataset.themeChoice === mode;
+    option.setAttribute("aria-pressed", String(isActive));
+  }
+}
+
+function setThemeMode(mode) {
+  if (!THEME_MODES.has(mode)) return;
+  try { localStorage.setItem(THEME_KEY, mode); } catch (_) {}
+  applyThemeMode(mode);
+}
+
+for (const option of els.themeOptions) {
+  option.addEventListener("click", () => setThemeMode(option.dataset.themeChoice));
+}
+
+systemThemeQuery.addEventListener("change", () => {
+  if (savedThemeMode() === "system") applyThemeMode("system");
 });
+
+applyThemeMode();
 
 /* ---------------- Events ---------------- */
 const onSearch = debounce(() => applyFilters(), 110);

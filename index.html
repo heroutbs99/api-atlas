@@ -18,8 +18,10 @@
       (() => {
         try {
           const saved = localStorage.getItem("api-atlas-theme");
+          const mode = ["system", "light", "dark"].includes(saved) ? saved : "system";
           const system = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-          document.documentElement.dataset.theme = saved || system;
+          document.documentElement.dataset.themeMode = mode;
+          document.documentElement.dataset.theme = mode === "system" ? system : mode;
         } catch (_) {}
       })();
     </script>
@@ -39,10 +41,17 @@
 
       <div class="topbar-actions">
         <span class="data-status" id="generatedAt" aria-live="polite">Charting the catalog…</span>
-        <button id="themeToggle" class="icon-button" type="button" aria-label="Toggle day / night map" title="Toggle day / night map">
-          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
+        <div class="theme-control" role="group" aria-label="Theme mode">
+          <button class="theme-option" type="button" data-theme-choice="system" aria-label="Use system theme" title="System theme">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+          </button>
+          <button class="theme-option" type="button" data-theme-choice="light" aria-label="Use light theme" title="Light theme">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </button>
+          <button class="theme-option" type="button" data-theme-choice="dark" aria-label="Use dark theme" title="Dark theme">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
       </div>
     </header>
 
