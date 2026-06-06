@@ -17,7 +17,7 @@
     <script>
       (() => {
         try {
-          const saved = localStorage.getItem("api-atlas-theme");
+          const saved = localStorage.getItem("api-atlas-theme-mode");
           const mode = ["system", "light", "dark"].includes(saved) ? saved : "system";
           const system = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
           document.documentElement.dataset.themeMode = mode;

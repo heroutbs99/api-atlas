@@ -41,7 +41,7 @@ const els = {
   copyrightYear: document.querySelector("#copyrightYear")
 };
 
-const THEME_KEY = "api-atlas-theme";
+const THEME_KEY = "api-atlas-theme-mode";
 const THEME_MODES = new Set(["system", "light", "dark"]);
 const systemThemeQuery = matchMedia("(prefers-color-scheme: dark)");
 const fmt = new Intl.NumberFormat();
